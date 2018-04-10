@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My Flask App Page</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/main.css") }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Welcome to your commute data visualization</h1>
+
+            <p>Let's process that data!</p>
+            <div class="hello" id="contact-form">
+                <form method="post" action="/generate" enctype="multipart/form-data">
+                    <input type=file name=file>
+                    <input type="submit" value="Submit" id="submit-button">
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>
