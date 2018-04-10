@@ -35,25 +35,25 @@ def generate():
 
     return redirect("/")
 
-
+# Here Joost to add bunch of code to do magic
+# ....you can process the date using
 @app.route("/commute/<data_file>")
 def commute(data_file=None):
-    # Here Joost to add bunch of code to do magic
-    # ....you can process the date using
 
     # We need to tell our template from where to get
     # the generated image file. So this image file
     # at this point will need to point to the newly
     # generated image
-    if data_file:
-        image_file = "/{}/{}".format(app.config['UPLOAD_FOLDER'], data_file)
+    new_image_file = None
+    if new_image_file:
+        new_image_file = "/{}/{}".format(app.config['UPLOAD_FOLDER'], data_file)
 
-    return render_template("data.html", image_file=image_file)
+    return render_template("data.html", image_file=new_image_file)
 
 # UTILS
 # Check to not let people upload anything else that we can process
 def allowed_file(filename):
-    allowed_extensions = set(['csv', 'txt', 'xls'])
+    allowed_extensions = set(['txt', 'csv', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
     return '.' in filename and \
        filename.rsplit('.', 1)[1].lower() in allowed_extensions
