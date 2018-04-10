@@ -66,3 +66,12 @@ a:link, a:visited {
 a:hover, a:active {
     background-color: red;
 }
+
+.isa_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    margin: 10px 0px;
+    padding:12px;
+    font-size: 20px;
+    font-family: 'Open Sans';
+}

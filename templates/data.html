@@ -7,11 +7,13 @@
 
     <body>
         <div class="container">
-            {{if image_file}}
+            {% if image_file %}
             <img src="{{image_file}}">
-            {{else}}
-            <p>No data was generated....sooz!</p>
-            {{endif}}
+            {% else %}
+            <div class="isa_error">
+                <p>No data was generated 🤷‍♀️</p>
+            </div>
+            {% endif %}
         </div>
     </body>
 
